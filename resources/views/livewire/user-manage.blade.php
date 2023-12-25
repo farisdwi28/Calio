@@ -1,6 +1,16 @@
 <div>
+    @if (session()->has('message'))
+        <div class="bg-green-400 text-white rounded-md p-2 mb-4">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    @if ($isModal)
+        @include('livewire.modal-user-manage')
+    @endif
     <div class="overflow-x-auto shadow-md sm:rounded-lg p-4 sm:ml-64 pt-32">
-        <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+        <div
+            class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
             <label for="table-search" class="sr-only">Search</label>
             <div class="relative">
                 <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -33,8 +43,9 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($users as $user)
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                @foreach ($users as $user)
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                             <div>
                                 <div class="text-base font-semibold">{{ $user->name }}</div>
@@ -48,8 +59,10 @@
                             {{ $user->role }}
                         </td>
                         <td class="flex flex-row gap-3 px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                            <button wire:click="edit({{ $user->id }})"
+                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+                            <button wire:click="delete({{ $user->id }})"
+                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
                         </td>
                     </tr>
                 @endforeach

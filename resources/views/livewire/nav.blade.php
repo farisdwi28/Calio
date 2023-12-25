@@ -12,7 +12,8 @@
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                         data-dropdown-placement="bottom">
                         <span class="sr-only">Open user menu</span>
-                        <img class="w-8 h-8 rounded-full" src="{{ asset('assets/images/sementara.png') }}"
+                        <img class="w-8 h-8 rounded-full"
+                            src="{{ url('storage/' . Auth::user()->photo) }}"
                             alt="user photo">
                     </button>
                     <!-- Dropdown menu -->
@@ -27,8 +28,8 @@
                         <ul class="py-2" aria-labelledby="user-menu-button">
                             <li>
                                 <a href="/Profile">
-                                <button
-                                    class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</button></a>
+                                    <button
+                                        class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</button></a>
                             </li>
                             <li>
                                 <button wire:click="logout"

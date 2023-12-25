@@ -10,6 +10,22 @@
                     <form class="space-y-6 w-full">
                         <h1 class="text-4xl text-primary2 font-bold text-center mb-6">Register</h1>
 
+
+
+                        <div class="mb-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                for="file_input">Upload file</label>
+                            <input
+                                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                aria-describedby="file_input_help" id="file_input" type="file" wire:model="photo">
+                            <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG
+                                or GIF (MAX. 800x400px).</p>
+                        </div>
+
+
+
+
+
                         <div class="mb-4">
                             <label for="formName" class="block text-sm font-semibold text-gray-900">Nama Lengkap</label>
                             <div class="flex">

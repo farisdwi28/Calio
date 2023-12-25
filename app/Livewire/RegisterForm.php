@@ -3,13 +3,17 @@
 namespace App\Livewire;
 use Livewire\Component;
 use App\Models\user;
+use Livewire\WithFileUploads;
 
 class RegisterForm extends Component
 {
-    public $users, $name, $phone_number, $username, $password, $id, $role;
+    use WithFileUploads;
+
+    public $users, $name, $phone_number, $username, $password, $id, $role, $photo;
+
     public function render()
     {
-        $this->users = user::orderBy('created_at', 'DESC')->get();
+        $this->users = User::orderBy('created_at', 'DESC')->get();
         return view('livewire.register-form');
     }
 
@@ -25,6 +29,7 @@ class RegisterForm extends Component
         $this->username = '';
         $this->password = '';
         $this->id = '';
+        $this->photo = null;
     }
 
     public function createUpdate()
@@ -34,13 +39,18 @@ class RegisterForm extends Component
             'phone_number' => 'required|numeric',
             'username' => 'required|string|unique:users,username,' . $this->id,
             'password' => 'required|string|min:8',
+            'photo' => 'nullable|image|max:1024',
         ]);
 
-        user::updateOrCreate(['id' => $this->id], [
+        // Store uploaded photo
+        $photoPath = $this->photo ? $this->photo->store('photos', 'public') : null;
+
+        User::updateOrCreate(['id' => $this->id], [
             'name' => $this->name,
             'phone_number' => $this->phone_number,
             'username' => $this->username,
             'password' => bcrypt($this->password),
+            'photo' => $photoPath,
         ]);
 
         session()->flash('message', $this->id ? $this->name . ' Diperbaharui' : $this->name . ' Ditambahkan');
