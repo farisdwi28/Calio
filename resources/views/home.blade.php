@@ -24,8 +24,10 @@
 
     <div class="flex justify-center my-20">
         <div class="text-center">
-            <h1 class="text-4xl text-primary1 font-bold mb-4" data-aos="fade-down">RENCANAKAN TUJUAN <br> UNTUK TUBUH YANG SEHAT</h1>
-            <p class="text-black mb-8" data-aos="fade-down">"Bukan hanya tentang olahraga, tapi juga tentang perubahan positif.<br> Temukan
+            <h1 class="text-4xl text-primary1 font-bold mb-4" data-aos="fade-down">RENCANAKAN TUJUAN <br> UNTUK TUBUH
+                YANG SEHAT</h1>
+            <p class="text-black mb-8" data-aos="fade-down">"Bukan hanya tentang olahraga, tapi juga tentang perubahan
+                positif.<br> Temukan
                 inspirasi di setiap rencana bersama kami dan tingkatkan kualitas hidup anda."</p>
             <div class="flex flex-cols-1 md:flex-cols-1 lg:flex-cols-2 xl:flex-cols-2 justify-center gap-10">
                 <div class="flex flex-col justify-center text-center items-center" data-aos="fade-right">
@@ -56,18 +58,21 @@
 
     <div class="text-center mt-10">
         <h1 class="text-4xl text-primary1 font-bold mb-4" data-aos="fade-down">ARTIKEL SEPUTAR KESEHATAN</h1>
-        <p class="text-black mb-8" data-aos="fade-down"><br>"Selami Dunia Kesehatan dengan Informasi Terkini! <br> Temukan Rangkuman Menarik
+        <p class="text-black mb-8" data-aos="fade-down"><br>"Selami Dunia Kesehatan dengan Informasi Terkini! <br>
+            Temukan Rangkuman Menarik
             dan Artikel Penuh Wawasan tentang Kesehatan Mental, Tips Gaya Hidup Sehat, Pengelolaan Stres,<br> serta
             Inovasi Terbaru dalam Dunia Kesehatan. Jangan Lewatkan Kesempatan untuk Meningkatkan Kualitas Hidup Anda
             melalui Pengetahuan <br> yang Mendalam di Artikel Kesehatan Kami yang Penuh Insight!"</p>
     </div>
     <div class="flex flex-row gap-3 relative justify-center my-14" data-aos="zoom-in">
         <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-            <div
-                class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8fDA%3D"
-                    alt="card-image" />
-            </div>
+            <a href="{{ url('/artikel') }}">
+                <div
+                    class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8fDA%3D"
+                        alt="card-image" />
+                </div>
+            </a>
             <div class="p-6">
                 <h5
                     class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
@@ -82,16 +87,18 @@
             </div>
             <div class="p-6 pt-0">
                 <div class="relative z-10 flex flex-col items-center py-5">
-                    <livewire:button :buttonText="'Baca Lebih'" :buttonAction="'/artikel1'" />
+                    <livewire:button :buttonText="'Baca Lebih'" :buttonAction="'/artikel'" />
                 </div>
             </div>
         </div>
         <div class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-            <div
-                class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="card-image" />
-            </div>
+            <a href="{{ url('/artikel1') }}">
+                <div
+                    class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+                    <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="card-image" />
+                </div>
+            </a>
             <div class="p-6">
                 <h5
                     class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
@@ -105,7 +112,7 @@
             </div>
             <div class="p-6 pt-0">
                 <div class="relative z-10 flex flex-col items-center py-5">
-                    <livewire:button :buttonText="'Baca Lebih'" :buttonAction="'/artikel'" />
+                    <livewire:button :buttonText="'Baca Lebih'" :buttonAction="'/artikel1'" />
                 </div>
             </div>
         </div>

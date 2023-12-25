@@ -11,6 +11,14 @@ Route::get('', function () {
     return view('home');
 });
 
+Route::get('/artikel', function () {
+    return view('artikel/artikel');
+});
+
+Route::get('/artikel1', function () {
+    return view('artikel/artikel1');
+});
+
 Route::get('/login', function () {
     return view('Login/login');
 });
@@ -60,6 +68,10 @@ Route::group(['middleware' => 'auth.custom'], function () {
         return view('AdminCalio/userManage');
     });
 
+    Route::get('/dashboardAdmin/kelolaJadwal', function () {
+        return view('AdminCalio/kelolaJadwal');
+    });
+
     Route::get('/cardio', function () {
         return view('kelas/cardio');
     });
@@ -80,3 +92,6 @@ Route::group(['middleware' => 'auth.custom'], function () {
         return view('detail');
     });
 });
+
+
+
