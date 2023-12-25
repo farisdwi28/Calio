@@ -1,13 +1,13 @@
 <div class="relative h-screen overflow-hidden">
-    <div class="absolute inset-0">
-        <video autoplay loop muted class="w-full h-full object-cover">
-            <source src="{{ asset('assets/images/bg.mp4') }}" type="video/mp4">
-        </video>
+    <div class="fixed z-10 inset-0 overflow-y-auto">
+        <div class="absolute inset-0">
+            <img src="{{ asset('assets/images/bglogin.jpeg') }}" class="fixed w-screen h-screen object-cover">
+        </div>
     </div>
     <div class="flex items-center justify-center h-full relative z-10">
         <div class="flex gap-16 w-full max-w-2xl p-6 rounded-lg bg-white bg-opacity-90 text-white shadow-lg">
             <form class="space-y-6 w-full">
-                <h1 class="text-4xl text-primary2 font-bold text-center mb-6">LOGIN</h1>
+                <h1 class="text-4xl text-primary1 font-bold text-center mb-6">MASUK</h1>
                 <div class="mb-4">
                     <label for="formUsername" class="block text-base font-semibold text-gray-900">Username</label>
                     <div class="flex">
@@ -23,10 +23,12 @@
                             class="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                             placeholder="calio2023">
                     </div>
-                    @error('username') <span>{{ $message }}</span> @enderror
+                    @error('username')
+                        <span>{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="formPassword" class="block text-base font-semibold text-gray-900">Password</label>
+                    <label for="formPassword" class="block text-base font-semibold text-gray-900">Kata Sandi</label>
                     <div class="flex">
                         <span
                             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 rounded-s-md">
@@ -40,7 +42,9 @@
                             class="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                             placeholder="******">
                     </div>
-                    @error('password') <span>{{ $message }}</span> @enderror
+                    @error('password')
+                        <span>{{ $message }}</span>
+                    @enderror
                 </div>
                 <button wire:click="login" type="button"
                     class="group relative overflow-hidden bg-primary1 focus:ring-4 focus:ring-blue-300 inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center transition-all transform hover:scale-105">
@@ -56,11 +60,11 @@
                     </div>
                 </button>
                 <div class="text-base font-bold text-gray-500">
-                    Not registered? <a href="/register" class="text-blue-700 hover:underline">Create account</a>
+                    Belum Memiliki Akun? <a href="/register" class="text-blue-700 hover:underline">Buat Akun</a>
                 </div>
             </form>
-            <div class="hidden md:flex w-1/2">
-                <img src="{{ asset('assets/images/side.png') }}" class="w-full h-full object-cover" alt="Side Image">
+            <div class="hidden md:flex w-1/2 items-center justify-center">
+                <img src="{{ asset('assets/images/logonew.png') }}" class="w-35 h-20" alt="Side Image">
             </div>
         </div>
     </div>
