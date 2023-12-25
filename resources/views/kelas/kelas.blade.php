@@ -32,7 +32,7 @@
                 <img class="w-full h-48 object-cover mb-4 rounded-md" src="{{ asset('assets/images/workout.avif') }}"
                     alt="Card 1">
                 </a>
-                <h2 class="text-2xl font-semibold mb-4 text-primary1">WORKOUT</h2>
+                <h2 class="text-3xl font-bold mb-4 text-primary1">WORKOUT</h2>
                 <p class="text-gray-700">Workout untuk membentuk dan memperindah tubuhmu.</p>
                 <div class="mt-6">
                     <livewire:button :buttonText="'Mulai'" :buttonAction="'/workout'"

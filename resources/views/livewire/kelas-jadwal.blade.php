@@ -63,11 +63,11 @@
                 <div class="flex justify-end">
                     <button wire:click.prevent="add()" type="button"
                         class="bg-teal-600 text-white py-2 px-6 rounded-md hover:bg-teal-700 focus:outline-none focus:ring focus:border-teal-700">
-                        Save
+                        Simpan
                     </button>
                     <button type="button" wire:click="closeModal()"
                         class="ml-2 bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-900 focus:outline-none focus:ring focus:border-teal-700">
-                        Cancel
+                        Batal
                     </button>
                 </div>
             </form>
