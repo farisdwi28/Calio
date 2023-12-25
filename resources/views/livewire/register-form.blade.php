@@ -22,10 +22,6 @@
                                 or GIF (MAX. 800x400px).</p>
                         </div>
 
-
-
-
-
                         <div class="mb-4">
                             <label for="formName" class="block text-sm font-semibold text-gray-900">Nama Lengkap</label>
                             <div class="flex">

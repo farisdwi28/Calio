@@ -42,7 +42,6 @@ class RegisterForm extends Component
             'photo' => 'nullable|image|max:1024',
         ]);
 
-        // Store uploaded photo
         $photoPath = $this->photo ? $this->photo->store('photos', 'public') : null;
 
         User::updateOrCreate(['id' => $this->id], [
