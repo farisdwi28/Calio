@@ -42,9 +42,9 @@
                             </div>
                             <ul class="py-1" role="none">
                                 <li>
-                                    <a href="#"
+                                    <button wire:click="logout"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                        role="menuitem">Sign out</a>
+                                        role="menuitem">Sign out</button>
                                 </li>
                             </ul>
                         </div>

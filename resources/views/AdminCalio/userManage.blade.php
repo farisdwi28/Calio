@@ -14,5 +14,4 @@
     @livewire('user-manage')
     @livewireScripts
 </body>
-
 </html>
