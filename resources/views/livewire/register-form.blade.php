@@ -1,20 +1,20 @@
     <div>
         <div class="relative h-screen overflow-hidden">
-            <div class="absolute inset-0">
-                <video autoplay loop muted class="w-full h-full object-cover">
-                    <source src="{{ asset('assets/images/bg.mp4') }}" type="video/mp4">
-                </video>
+            <div class="fixed z-10 inset-0 overflow-y-auto">
+                <<div class="absolute inset-0">
+                    <img src="{{ asset('assets/images/bgregis.avif') }}" class="fixed w-screen h-screen object-cover">
+                </div>
             </div>
             <div class="flex items-center justify-center h-full relative z-10">
                 <div class="flex gap-16 w-full max-w-2xl p-6 rounded-lg bg-white bg-opacity-90 text-white shadow-lg">
                     <form class="space-y-6 w-full">
-                        <h1 class="text-4xl text-primary2 font-bold text-center mb-6">Register</h1>
+                        <h1 class="text-4xl text-primary1 font-bold text-center mb-6">Daftar</h1>
 
 
 
                         <div class="mb-2">
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                for="file_input">Upload file</label>
+                                for="file_input">Unggah file</label>
                             <input
                                 class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                 aria-describedby="file_input_help" id="file_input" type="file" wire:model="photo">
@@ -87,7 +87,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="formPassword" class="block text-sm font-semibold text-gray-900">Password</label>
+                            <label for="formPassword" class="block text-sm font-semibold text-gray-900">Kata Sandi</label>
                             <div class="flex">
                                 <span
                                     class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 rounded-s-md">
@@ -121,7 +121,7 @@
                         </button>
 
                         <div class="text-base font-bold text-gray-500">
-                            Have an Account? <a href="/login" class="text-blue-700 hover:underline">Login Now</a>
+                            Sudah Punya Akun? <a href="/login" class="text-blue-700 hover:underline">Masuk Sekarang</a>
                         </div>
                     </form>
                 </div>
