@@ -76,11 +76,8 @@
                     <img src="{{ asset('assets/images/logonew.png') }}" class="h-12" alt="Calio Logo">
                 </a>
                 <div class="flex space-x-3 md:space-x-0 rtl:space-x-reverse gap-3">
-                    {{-- @if (auth()->check())
-            <p class="mt-2 text-center font-semibold">Hi, Senang Melihatmu!, {{ auth()->user()->name }}!</p> --}}
-
                     <livewire:button :buttonText="'Masuk'" :buttonAction="'/login'" />
-                    <livewire:button :buttonText="'Daftar'" :buttonAction="'/login'" />
+                    <livewire:button :buttonText="'Daftar'" :buttonAction="'/register'" />
 
 
                     <button data-collapse-toggle="navbar-sticky" type="button"
