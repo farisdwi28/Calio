@@ -8,7 +8,7 @@
             <div class="flex items-center justify-center h-full relative z-10">
                 <div class="flex gap-16 w-full max-w-2xl p-6 rounded-lg bg-white bg-opacity-90 text-white shadow-lg">
                     <form class="space-y-6 w-full">
-                        <h1 class="text-4xl text-primary1 font-bold text-center mb-6">Daftar</h1>
+                        <h1 class="text-4xl text-primary1 font-bold text-center mb-6">Daftar Akun</h1>
 
 
 
@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="formUsername" class="block text-sm font-semibold text-gray-900">Username</label>
+                            <label for="formUsername" class="block text-sm font-semibold text-gray-900">Nama Pengguna</label>
                             <div class="flex">
                                 <span
                                     class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 rounded-s-md">
@@ -104,7 +104,7 @@
 
                         <button wire:click="createUpdate" type="button"
                             class="group relative overflow-hidden bg-primary1 focus:ring-4 focus:ring-blue-300 inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center transition-all transform hover:scale-105">
-                            Register
+                            Daftar
                             <svg class="z-40 ml-2 -mr-1 w-4 h-4 transition-all duration-300 transform group-hover:translate-x-1"
                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"

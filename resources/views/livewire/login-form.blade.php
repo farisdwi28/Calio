@@ -9,7 +9,7 @@
             <form class="space-y-6 w-full">
                 <h1 class="text-4xl text-primary1 font-bold text-center mb-6">MASUK</h1>
                 <div class="mb-4">
-                    <label for="formUsername" class="block text-base font-semibold text-gray-900">Username</label>
+                    <label for="formUsername" class="block text-base font-semibold text-gray-900">Nama Pengguna</label>
                     <div class="flex">
                         <span
                             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 rounded-s-md">

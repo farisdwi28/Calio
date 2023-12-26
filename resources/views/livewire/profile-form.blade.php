@@ -5,7 +5,7 @@
                 <img src="{{ asset('assets/images/bgprof.avif') }}" class="fixed w-screen h-screen object-cover">
             </div>
         </div>
-        <div class="relative z-10 max-w-md mx-auto bg-white  p-6 rounded-md shadow-md my-20">
+        <div class="relative z-10 max-w-md mx-auto bg-white  p-6 rounded-md shadow-md my-36">
             <h1 class="text-2xl font-bold mb-4">Profile</h1>
             <label for="id"
                 class="hidden block text-sm font-medium text-gray-600">{{ optional(Auth::user())->id }}</label>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="username" class="block text-sm font-medium text-gray-600">Username:</label>
+                <label for="username" class="block text-sm font-medium text-gray-600">Nama Pengguna:</label>
                 @if (auth()->check())
                     <input type="text" id="username" name="username" class="mt-1 p-2 border rounded-md w-full"
                         placeholder="{{ optional(Auth::user())->username }}" wire:model="username">
