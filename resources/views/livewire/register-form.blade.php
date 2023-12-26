@@ -10,8 +10,6 @@
                     <form class="space-y-6 w-full">
                         <h1 class="text-4xl text-primary1 font-bold text-center mb-6">Daftar Akun</h1>
 
-
-
                         <div class="mb-2">
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 for="file_input">Unggah file</label>

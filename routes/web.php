@@ -2,22 +2,17 @@
 
 use App\Livewire\KelasJadwal;
 use App\Livewire\RegisterForm;
-// // use App\Livewire\Makanans;
 use App\Livewire\ProfileForm;
 use App\Livewire\Riwayatkelas;
+use App\Livewire\Article;
+use App\Livewire\ArtikelDetail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('', function () {
     return view('home');
 });
 
-Route::get('/artikel', function () {
-    return view('artikel/artikel');
-});
-
-Route::get('/artikel1', function () {
-    return view('artikel/artikel1');
-});
+Route::get('/artikel/{id}', [ArtikelDetail::class, 'showDetail'])->name('artikel.artikel');
 
 Route::get('/login', function () {
     return view('Login/login');
@@ -28,8 +23,17 @@ Route::get('/register', function () {
 });
 
 Route::group(['middleware' => 'auth.custom'], function () {
-    Route::get('/dashboardAdmin', function () {
-        return view('AdminCalio/Dashboard');
+    Route::group(['middleware' => 'admin'], function () {
+        Route::get('/dashboardAdmin/userManage', function () {
+            return view('AdminCalio/userManage');
+        });
+
+        Route::get('/dashboardAdmin/kelolaJadwal', function () {
+            return view('AdminCalio/kelolaJadwal');
+        });
+        Route::get('/dashboardAdmin/kelolaArtikel', function () {
+            return view('AdminCalio/kelolaArtikel')->with('livewireComponent', app(Article::class));
+        });
     });
 
     Route::get('/Profile', function () {
@@ -62,14 +66,6 @@ Route::group(['middleware' => 'auth.custom'], function () {
 
     Route::get('/makanan', function () {
         return view('makanan');
-    });
-
-    Route::get('/dashboardAdmin/userManage', function () {
-        return view('AdminCalio/userManage');
-    });
-
-    Route::get('/dashboardAdmin/kelolaJadwal', function () {
-        return view('AdminCalio/kelolaJadwal');
     });
 
     Route::get('/cardio', function () {
