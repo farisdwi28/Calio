@@ -42,7 +42,7 @@
                             <ul class="py-1" role="none">
                                 <li>
                                     <button wire:click="logout"
-                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                                         role="menuitem">Sign out</button>
                                 </li>
                             </ul>
@@ -74,7 +74,7 @@
                                 </path>
                             </g>
                         </svg>
-                        <span class="ms-3 font-semibold">UserManage</span>
+                        <span class="ms-3 font-semibold">Kelola User</span>
                     </a>
                 </li>
                 <li>

@@ -21,7 +21,7 @@
                     <img src="{{ asset('assets/images/hatha.jpeg') }}" alt="Yoga"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Hatha</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Hatha</h2>
                 <p class="text-gray-600 mb-4">Menggabungkan postur tubuh (asana) dan teknik pernapasan (pranayama) untuk
                     mencapai keseimbangan antara tubuh dan pikiran.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
@@ -35,7 +35,7 @@
                     <img src="{{ asset('assets/images/vanyasa.jpeg') }}" alt="Yoga"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Vanyasa</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Vanyasa</h2>
                 <p class="text-gray-600 mb-4">Fokus pada pergerakan yang lancar dan berkelanjutan yang diselaraskan
                     dengan pernapasan.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
@@ -53,7 +53,7 @@
                     <img src="{{ asset('assets/images/kundalini.jpeg') }}" alt="Yoga"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Kundalini</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Kundalini</h2>
                 <p class="text-gray-600 mb-4"> Fokus pada aktivasi energi kundalini, energi potensial yang terletak di
                     dasar tulang belakang.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
@@ -67,7 +67,7 @@
                     <img src="{{ asset('assets/images/anusara.jpeg') }}" alt="Yoga"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Anusara</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Anusara</h2>
                 <p class="text-gray-600 mb-4">Berfokus pada kesadaran hati dan pemahaman akan prinsip alam semesta.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
                     <livewire:button :buttonText="'Atur'" :buttonAction="'/jadwal'" />

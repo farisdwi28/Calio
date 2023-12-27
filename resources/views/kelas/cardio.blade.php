@@ -23,7 +23,7 @@
                     <img src="{{ asset('assets/images/joging.jpeg') }}" alt="Sports"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Jogging</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Jogging</h2>
                 <p class="text-gray-600 mb-4">Push Up melatih otot dada, trisep, bahu, dan inti. </p>
                 <div class="relative z-10 flex flex-col items-center py-5">
                     <livewire:button :buttonText="'Atur'" :buttonAction="'/jadwal'" />
@@ -36,7 +36,7 @@
                     <img src="{{ asset('assets/images/sepeda.jpg') }}" alt="Sports"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Bersepeda</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Bersepeda</h2>
                 <p class="text-gray-600 mb-4">Sit Up dapat menguatkan otot perut.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
                     <livewire:button :buttonText="'Atur'" :buttonAction="'/jadwal'" />
@@ -49,7 +49,7 @@
                     <img src="{{ asset('assets/images/renang.jpeg') }}" alt="Sports"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Berenang</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Berenang</h2>
                 <p class="text-gray-600 mb-4">Pull Up meningkatkan kekuatan tubuh atas, khususnya otot punggung dan
                     bahu.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
@@ -67,7 +67,7 @@
                     <img src="{{ asset('assets/images/skiping.jpeg') }}" alt="Sports"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Skiping</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Skiping</h2>
                 <p class="text-gray-600 mb-4">Squat melatih otot paha, panggul, dan punggung.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
                     <livewire:button :buttonText="'Atur'" :buttonAction="'/jadwal'" />
@@ -80,7 +80,7 @@
                     <img src="{{ asset('assets/images/jalan cepat.jpeg') }}" alt="Sports"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Jalan Cepat</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Jalan Cepat</h2>
                 <p class="text-gray-600 mb-4">Plank melatih otot punggung dan panggul.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
                     <livewire:button :buttonText="'Atur'" :buttonAction="'/jadwal'" />
@@ -93,7 +93,7 @@
                     <img src="{{ asset('assets/images/jumping.jpeg') }}" alt="Sports"
                         class="w-full h-48 object-cover rounded-md mb-4">
                 </a>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">Jumping Jacks</h2>
+                <h2 class="text-2xl font-bold text-primary1 mb-2">Jumping Jacks</h2>
                 <p class="text-gray-600 mb-4">Mountain Climbers melatih otot perut, lengan, dan kaki.</p>
                 <div class="relative z-10 flex flex-col items-center py-5">
                     <livewire:button :buttonText="'Atur'" :buttonAction="'/jadwal'" />

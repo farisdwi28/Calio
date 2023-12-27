@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="relative z-10 max-w-md mx-auto bg-white  p-6 rounded-md shadow-md my-36">
-            <h1 class="text-2xl font-bold mb-4">Profile</h1>
+            <h1 class="text-2xl font-bold mb-4 text-primary1">Profile</h1>
             <label for="id"
                 class="hidden block text-sm font-medium text-gray-600">{{ optional(Auth::user())->id }}</label>
 
