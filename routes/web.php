@@ -6,6 +6,7 @@ use App\Livewire\ProfileForm;
 use App\Livewire\Riwayatkelas;
 use App\Livewire\Article;
 use App\Livewire\ArtikelDetail;
+use App\Livewire\KelolaKelas;
 use Illuminate\Support\Facades\Route;
 
 Route::get('', function () {
@@ -33,6 +34,9 @@ Route::group(['middleware' => 'auth.custom'], function () {
         });
         Route::get('/dashboardAdmin/kelolaArtikel', function () {
             return view('AdminCalio/kelolaArtikel')->with('livewireComponent', app(Article::class));
+        });
+        Route::get('/dashboardAdmin/kelolaKelas', function () {
+            return view('AdminCalio/kelolaKelas')->with('livewireComponent', app(KelolaKelas::class));
         });
     });
 

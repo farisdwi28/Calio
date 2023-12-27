@@ -48,11 +48,11 @@
                         class="mt-1 p-2 border-b-2 border-teal-600 w-full focus:outline-none focus:border-teal-700"
                         wire:model="kelas">
                         <option value="" selected disabled>Pilih Kelas</option>
-                        <option value="workout" data-image="{{ asset('assets/images/workout-image.jpg') }}">Workout
+                        <option value="workout">Workout
                         </option>
-                        <option value="cardio" data-image="{{ asset('assets/images/cardio-image.jpg') }}">Cardio
+                        <option value="cardio">Cardio
                         </option>
-                        <option value="yoga" data-image="{{ asset('assets/images/yoga-image.jpg') }}">Yoga</option>
+                        <option value="yoga">Yoga</option>
                     </select>
 
                     @error('kelas')
