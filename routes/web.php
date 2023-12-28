@@ -31,8 +31,13 @@ Route::group(['middleware' => 'auth.custom'], function () {
         Route::get('/dashboardAdmin/kelolaJadwal', function () {
             return view('AdminCalio/kelolaJadwal');
         });
+
         Route::get('/dashboardAdmin/kelolaArtikel', function () {
             return view('AdminCalio/kelolaArtikel')->with('livewireComponent', app(Article::class));
+        });
+
+        Route::get('/dashboardAdmin/kelolaMakanan', function () {
+            return view('AdminCalio/kelolaMakanan');
         });
     });
 

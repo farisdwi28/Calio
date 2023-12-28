@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('makanans', function (Blueprint $table) {
-            $table->id(); // This makes the 'id' field auto-incrementing
+            $table->id(); 
+            $table->string('photo', 2000);
             $table->string('name');
             $table->text('description');
-            $table->string('image', 2000);
             $table->string('harga');
             $table->integer('stok')->default(0);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

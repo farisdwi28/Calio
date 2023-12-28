@@ -25,10 +25,10 @@
                     Campuran berbagai sayuran segar dengan dressing rendah lemak.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <a href="{{ url('/detail') }}">
                             <livewire:button :buttonText="'Lihat Detail'" :buttonAction="'/detail'" />
                         </a>
@@ -47,12 +47,11 @@
                     gula.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
-                        </a>
                     </div>
                 </div>
             </div>
@@ -66,10 +65,10 @@
                     Quinoa dengan sayuran, alpukat, dan protein tanpa lemak.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -84,10 +83,10 @@
                     Bowl berisi smoothie, granola, dan potongan buah-buahan.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -103,10 +102,10 @@
                 </p>
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -122,10 +121,10 @@
                     hitam.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -142,10 +141,10 @@
 
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'"/>
                     </div>
                 </div>
@@ -161,10 +160,10 @@
                     kukus.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -180,10 +179,10 @@
                     alami.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -198,10 +197,10 @@
                     Salad ala Yunani dengan campuran tomat, mentimun, feta, dan olive.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -217,10 +216,10 @@
                     saus alpukat.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>
@@ -236,10 +235,10 @@
                     zaitun.
                 </p>
                 <div class="relative z-10 flex flex-row items-center">
-                    <div class="mr-4">
+                    <div class="mr-4 mt-5">
                         <livewire:button :buttonText="'Beli'" />
                     </div>
-                    <div>
+                    <div class="mt-5">
                         <livewire:button :buttonText="'Lihat Detail'" />
                     </div>
                 </div>

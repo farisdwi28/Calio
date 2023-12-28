@@ -11,11 +11,12 @@ class makanan extends Model
 
     protected $fillable = [
         // Add 'id' to allow mass assignment
+        'photo',
         'name',
         'description',
-        'image',
         'harga',
         'stok',
+        'status',
         // Add other attributes as needed
     ];
 }

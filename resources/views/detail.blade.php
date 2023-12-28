@@ -34,9 +34,6 @@
                 <p><strong>Protein:</strong> 0.04g</p>
                 <p><strong>Karbohidrat:</strong> 1.75g</p>
                 <p><strong>Lemak:</strong> 0.13g</p>
-                <div class="bg-primary1 text-white p-3 rounded-lg">
-                    <p class="font-semibold text-lg">Rp.20.000</p>
-                </div>
             </div>
         </div>
 
