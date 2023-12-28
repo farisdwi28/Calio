@@ -5,7 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Kelas;
 
-class   Workout extends Component
+class Yoga extends Component
 {
     public $id;
     public $kategori;
@@ -15,8 +15,8 @@ class   Workout extends Component
 
     public function render()
     {
-        return view('livewire.workout', [
-            'Kelas' => Kelas::where('kategori', 'workout')
+        return view('livewire.yoga', [
+            'Kelas' => Kelas::where('kategori', 'yoga')
     ->orderBy('created_at', 'DESC')
     ->get(),
         ]);
@@ -32,7 +32,7 @@ class   Workout extends Component
             $this->title = $kelas->title;
             $this->description = $kelas->description;
         }
-        redirect()->intended('/workout');
+        redirect()->intended('/yoga');
     }
 }
 

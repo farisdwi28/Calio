@@ -116,10 +116,30 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('dashboardAdmin/kelolaArtikel') }}"
+                    <a href="{{ url('dashboardAdmin/kelolaKelas') }}"
                         class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" fill="#000000"
-                            version="1.1" id="XMLID_65_" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M20 10V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V10M20 10V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V10M20 10H4M8 3V7M16 3V7"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                                <rect x="6" y="12" width="3" height="3" rx="0.5" fill="#000000">
+                                </rect>
+                                <rect x="10.5" y="12" width="3" height="3" rx="0.5" fill="#000000">
+                                </rect>
+                                <rect x="15" y="12" width="3" height="3" rx="0.5" fill="#000000">
+                                </rect>
+                            </g>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap font-semibold">Kelola Kelas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('dashboardAdmin/kelolaArtikel') }}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" fill="#000000" version="1.1" id="XMLID_65_" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
