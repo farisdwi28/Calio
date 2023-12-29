@@ -17,18 +17,10 @@
                     <img src="{{ url('storage/' . $makan->photo) }}" alt=""
                         class="w-full h-48 object-cover rounded-t-lg" />
                     <div class="p-6">
-                        <h2 class="text-xl font-bold mb-2 text-primary1">{{ $makan->name }}</h2>
-                        <p class="text-gray-600">{{ $makan->description }}</p>
+                        <h2 class="text-3xl font-bold mb-2 text-primary1">{{ $makan->name }}</h2>
+                        <p class="text-semibold">{{ $makan->description }}</p>
                         <p class="text-primary1 font-ibold">Harga: {{ $makan->harga }}</p>
                         <p class="text-primary1 font-bold">Stok: {{ $makan->stok }}</p>
-                        <div class="flex mt-5">
-                            <div class="mr-4">
-                                <livewire:button :buttonText="'Beli'" />
-                            </div>
-                            <div>
-                                <livewire:button :buttonText="'Lihat Detail'" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             @endforeach
