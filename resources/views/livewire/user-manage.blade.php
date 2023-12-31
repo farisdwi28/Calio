@@ -35,7 +35,7 @@
                         Phone Number
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Potition
+                        Position
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Action
@@ -43,29 +43,36 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user)
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                            <div>
-                                <div class="text-base font-semibold">{{ $user->name }}</div>
-                                <div class="font-normal text-gray-500">{{ $user->username }}</div>
-                            </div>
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $user->phone_number }}
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $user->role }}
-                        </td>
-                        <td class="flex flex-row gap-3 px-6 py-4">
-                            <button wire:click="edit({{ $user->id }})"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
-                            <button wire:click="delete({{ $user->id }})"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                @if (count($users) > 0)
+                    @foreach ($users as $user)
+                        <tr class="bg-white border-b">
+                            <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                <div>
+                                    <div class="text-base font-semibold">{{ $user->name }}</div>
+                                    <div class="font-normal text-gray-500">{{ $user->username }}</div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $user->phone_number }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $user->role }}
+                            </td>
+                            <td class="flex flex-row gap-3 px-6 py-4">
+                                <button wire:click="edit({{ $user->id }})"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+                                <button wire:click="delete({{ $user->id }})"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="4" class="font-semibold py-3">
+                            Tidak ada data
                         </td>
                     </tr>
-                @endforeach
+                @endif
             </tbody>
         </table>
     </div>

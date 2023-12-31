@@ -52,37 +52,50 @@
     </div>
     <div class="flex flex-col">
         <div class="flex gap-3 relative justify-center my-14" data-aos="zoom-in">
-            @foreach ($articles as $artikel)
+            @if (count($articles) > 0)
+                @foreach ($articles as $artikel)
+                    <div
+                        class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+                        <a href="{{ url('/artikel') }}">
+                            <div
+                                class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
+                                <img src="{{ url('storage/' . $artikel->photo) }}" alt="card-image" class="w-full" />
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <h5
+                                class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                                {{ $artikel->title }}
+                            </h5>
+                            <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                                {{ $artikel->shortdescription }}
+                            </p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="relative z-10 flex flex-col items-center py-5">
+                                <a href="{{ url('/artikel', $artikel->id) }}" type="button"
+                                    class="group relative overflow-hidden bg-primary1 focus:ring-4 focus:ring-blue-300 inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center transition-all transform hover:scale-105">
+                                    Lihat Artikel
+                                    <svg class="z-40 ml-2 -mr-1 w-4 h-4 transition-all duration-300 transform group-hover:translate-x-1"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <div
+                                        class="absolute inset-0 h-[200%] w-[200%] rotate-45 translate-x-[-70%] transition-all group-hover:scale-100 bg-white/30 group-hover:translate-x-[50%] z-20 duration-1000">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
                 <div
-                    class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-                    <a href="{{ url('/artikel') }}">
-                        <div
-                            class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                            <img src="{{ url('storage/' . $artikel->photo) }}" alt="card-image" class="w-full" />
-                        </div>
-                    </a>
-                    <div class="p-6">
-                        <h5
-                            class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            {{ $artikel->title }}
-                        </h5>
-                        <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                            {{ $artikel->shortdescription }}
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <div class="relative z-10 flex flex-col items-center py-5">
-                            <a href="{{ url('/artikel', $artikel->id) }}" type="button" class="group relative overflow-hidden bg-primary1 focus:ring-4 focus:ring-blue-300 inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center transition-all transform hover:scale-105">
-                                Lihat Artikel
-                                <svg class="z-40 ml-2 -mr-1 w-4 h-4 transition-all duration-300 transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                                <div class="absolute inset-0 h-[200%] w-[200%] rotate-45 translate-x-[-70%] transition-all group-hover:scale-100 bg-white/30 group-hover:translate-x-[50%] z-20 duration-1000"></div>
-                            </a>
-                        </div>
-                    </div>
+                    class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Tidak Ada Artikel</h5>
                 </div>
-            @endforeach
+            @endif
         </div>
     </div>
 </div>
