@@ -10,11 +10,26 @@ use Livewire\WithFileUploads;
 class ProfileForm extends Component
 {
     use WithFileUploads;
+
     public $id, $name, $phone_number, $username, $password, $photo;
+
     public function render()
     {
         return view('livewire.profile-form');
     }
+
+    public function mount()
+    {
+        $user = Auth::user();
+
+        if ($user) {
+            $this->id = $user->id;
+            $this->name = $user->name;
+            $this->phone_number = $user->phone_number;
+            $this->username = $user->username;
+        }
+    }
+
     public function edit()
     {
         $this->validate([
@@ -26,27 +41,34 @@ class ProfileForm extends Component
         ]);
 
         $user = User::find(Auth::id());
-        $photoPath = $this->photo ? $this->photo->store('photos', 'public') : null;
+
         if ($user) {
-            $user->update([
+            $userData = [
                 'name' => $this->name,
                 'phone_number' => $this->phone_number,
                 'username' => $this->username,
-                'password' => bcrypt($this->password),
-                'photo' => $photoPath,
-            ]);
+                'password' => $this->password ? bcrypt($this->password) : $user->password,
+            ];
+
+            if ($this->photo) {
+                $userData['photo'] = $this->photo->store('photos', 'public');
+            }
+
+            $user->update($userData);
 
             session()->flash('message', 'Profil diperbarui');
-            redirect()->to('/Profile');
+            return redirect('/Profile');
         }
     }
 
     public function delete($id)
     {
-        $users = user::find($id);
-        $users->delete();
-        session()->flash('message', $users->name . ' Dihapus');
+        $user = User::find($id);
+
+        if ($user) {
+            $user->delete();
+            session()->flash('message', $user->name . ' Dihapus');
+            return redirect('/home'); // Redirect to a suitable page after deletion
+        }
     }
-
-
 }
