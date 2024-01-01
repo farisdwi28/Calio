@@ -59,7 +59,7 @@
                         <a href="{{ url('/artikel') }}">
                             <div
                                 class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                                <img src="{{ url('storage/' . $artikel->photo) }}" alt="card-image" class="w-full" />
+                                <img src="{{ url('storage/' . $artikel->photo) }}" alt="card-image" class="w-full h-80" />
                             </div>
                         </a>
                         <div class="p-6">
