@@ -1,6 +1,6 @@
 <div>
     @if (auth()->check())
-        <nav id="scrollNav"
+        <nav
             class="bg-transparent fixed top-0 z-30 w-full backdrop-blur-3xl transition-transform duration-300 transform">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="{{ url('/') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -93,20 +93,4 @@
             </div>
         </nav>
     @endif
-    <script>
-        let prevScrollPos = window.pageYOffset;
-
-        window.onscroll = function() {
-            const currentScrollPos = window.pageYOffset;
-
-            if (prevScrollPos > currentScrollPos) {
-                document.getElementById("scrollNav").style.transform = "translateY(0)";
-            } else {
-                document.getElementById("scrollNav").style.transform = "translateY(-100%)";
-            }
-
-            prevScrollPos = currentScrollPos;
-        };
-    </script>
-
 </div>

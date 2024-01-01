@@ -1,4 +1,4 @@
-<div>
+<div data-aos="zoom-in">
     <div class="h-screen relative flex items-center justify-center">
         <div class="absolute inset-0">
             <img src="{{ asset('assets/images/bgnew.jpg') }}" class="w-full h-full opacity-70 object-cover">
@@ -51,12 +51,12 @@
             melalui Pengetahuan <br> yang Mendalam di Artikel Kesehatan Kami yang Penuh Insight!"</p>
     </div>
     <div class="flex flex-col">
-        <div class="flex gap-3 relative justify-center my-14" data-aos="zoom-in">
+        <div class="flex gap-3 relative justify-center my-14 overflow-x-scroll" data-aos="zoom-in">
             @if (count($articles) > 0)
                 @foreach ($articles as $artikel)
                     <div
                         class="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-                        <a href="{{ url('/artikel') }}">
+                        <a href="{{ url('/artikel', $artikel->id) }}">
                             <div
                                 class="relative h-auto mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
                                 <img src="{{ url('storage/' . $artikel->photo) }}" alt="card-image" class="w-full h-80" />
