@@ -93,7 +93,7 @@
             @else
                 <div
                     class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                    <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Tidak Ada Artikel</h5>
+                    <h5 class="mb-2 text-3xl font-bold text-gray-900 text-primary1">Tidak Ada Artikel</h5>
                 </div>
             @endif
         </div>
