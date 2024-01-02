@@ -10,7 +10,7 @@ class Makan extends Component
 {
     use WithFileUploads;
 
-    public $makans, $photo, $name, $description, $harga, $stok, $status, $id;
+    public $makans, $photo, $name, $description, $harga, $stok, $status, $kategori, $id;
     public $isModal = 0;
     public function render()
     {
@@ -42,6 +42,7 @@ class Makan extends Component
         $this->harga = '';
         $this->stok = '';
         $this->status = '';
+        $this->kategori = '';
     }
 
     public function add()
@@ -53,6 +54,7 @@ class Makan extends Component
         'harga' => 'numeric',
         'stok' => 'numeric',
         'status' => 'in:active,inactive',
+        'kategori' => 'string|max:255',
     ]);
 
     try {
@@ -65,6 +67,7 @@ class Makan extends Component
             'harga' => $this->harga,
             'stok' => $this->stok,
             'status' => $this->status,
+            'kategori' => $this->kategori,
         ]);
 
         session()->flash('message', 'Makanan berhasil ditambahkan.');
@@ -88,6 +91,7 @@ class Makan extends Component
             $this->harga = $makans->harga;
             $this->stok = $makans->stok;
             $this->status = $makans->status;
+            $this->kategori = $makans->kategori;
         }
 
         $this->openModal();
