@@ -12,7 +12,7 @@ class ProfileForm extends Component
     use WithFileUploads;
 
     public $id, $name, $phone_number, $username, $password, $photo;
-
+    public $showPassword = false;
     public function render()
     {
         return view('livewire.profile-form');
@@ -28,6 +28,11 @@ class ProfileForm extends Component
             $this->phone_number = $user->phone_number;
             $this->username = $user->username;
         }
+    }
+
+    public function togglePasswordVisibility()
+    {
+        $this->showPassword = !$this->showPassword;
     }
 
     public function edit()

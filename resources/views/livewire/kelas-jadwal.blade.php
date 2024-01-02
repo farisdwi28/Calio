@@ -22,13 +22,8 @@
 
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-600">Nama:</label>
-                    @if (auth()->check())
                         <input type="text" id="name" name="name" class="mt-1 p-2 border rounded-md w-full"
                             placeholder="{{ auth()->user()->name }}" wire:model="name" disabled>
-                    @else
-                        <input type="text" id="name" name="name" class="mt-1 p-2 border rounded-md w-full"
-                            disabled placeholder="Tidak ada user login" wire:model="name">
-                    @endif
                 </div>
 
 

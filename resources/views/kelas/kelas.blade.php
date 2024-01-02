@@ -11,9 +11,8 @@
     @livewireStyles
 </head>
 
-<body class="font-sans bg-gray-100" data-aos="zoom-in">
-    @livewire('nav')
-
+@livewire('nav')
+<body class="font-sans bg-gray-100 scroll-smooth" data-aos="zoom-in">
     <div class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
             <img src="{{ asset('assets/images/kelasbg.jpeg') }}" class="w-full h-full object-cover" alt="Banner">

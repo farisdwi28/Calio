@@ -5,7 +5,7 @@
                     <img src="{{ asset('assets/images/bgregis.avif') }}" class="fixed w-screen h-screen object-cover">
                 </div>
             </div>
-            <div class="flex items-center justify-center h-full relative z-10" data-aos="zoom-out-up">
+            <div class="flex items-center justify-center h-full relative z-10">
                 <div class="flex gap-16 w-full max-w-2xl p-6 rounded-lg bg-white bg-opacity-90 text-white shadow-lg">
                     <form class="space-y-6 w-full">
                         <h1 class="text-4xl text-primary1 font-bold text-center mb-6">Daftar Akun</h1>
