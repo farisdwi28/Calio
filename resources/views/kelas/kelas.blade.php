@@ -12,25 +12,27 @@
 </head>
 
 @livewire('nav')
+
 <body class="font-sans bg-gray-100 scroll-smooth" data-aos="zoom-in">
-    <div class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="{{ asset('assets/images/kelasbg.jpeg') }}" class="w-full h-full object-cover" alt="Banner">
+    <div class="relative h-screen/1.2 flex items-center justify-center overflow-hidden py-24">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <img src="{{ asset('assets/images/kelasbg.jpeg') }}" class="w-full object-cover" alt="Banner">
         </div>
-        <div class="relative z-10 text-center text-white mt-20" data-aos="fade-up">
-            <img src="{{ asset('assets/images/logotulisan.png') }}" class="h-14 mx-auto my-3" alt="Calio Logo">
+        <div class="relative z-10 text-center text-white mt-32" data-aos="fade-up">
+            <img src="{{ asset('assets/images/logotulisan.png') }}" class="h-20 mx-auto my-3" alt="Calio Logo">
         </div>
     </div>
 
-    <div class="mx-auto mt-16 mb-20 px-4 sm:px-6 md:px-8 text-center">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary1 mb-8" data-aos="fade-up">MULAI TUJUANMU</h1>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"  data-aos="flip-down">
+
+    <div class="mx-auto mt-16 mb-20 px-4 sm:px-6 md:px-8 text-center">
+        <h5 class="text-2xl md:text-3xl lg:text-4xl font-bold text-primary1 mb-3" data-aos="fade-up">Mulai Tujuanmu</h5>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="flip-down">
             <div
                 class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out max-w-screen-lg">
                 <a href="{{ url('/workout') }}">
-                <img class="w-full h-48 object-cover mb-4 rounded-md" src="{{ asset('assets/images/workout.avif') }}"
-                    alt="Card 1">
+                    <img class="w-full h-48 object-cover mb-4 rounded-md"
+                        src="{{ asset('assets/images/workout.avif') }}" alt="Card 1">
                 </a>
                 <h2 class="text-3xl font-bold mb-4 text-primary1">WORKOUT</h2>
                 <p class="text-gray-700">Workout untuk membentuk dan memperindah tubuhmu.</p>
@@ -42,8 +44,8 @@
             <div
                 class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out max-w-screen-lg">
                 <a href="{{ url('/cardio') }}">
-                <img class="w-full h-48 object-cover mb-4 rounded-md" src="{{ asset('assets/images/cardio.avif') }}"
-                    alt="Card 2">
+                    <img class="w-full h-48 object-cover mb-4 rounded-md" src="{{ asset('assets/images/cardio.avif') }}"
+                        alt="Card 2">
                 </a>
                 <h2 class="text-3xl font-bold mb-4 text-primary1">CARDIO</h2>
                 <p class="text-gray-600">Cardio untuk membuat tubuh menjadi lebih sehat dan bugar.</p>
@@ -55,8 +57,8 @@
             <div
                 class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out max-w-screen-lg">
                 <a href="{{ url('/yoga') }}">
-                <img class="w-full h-48 object-cover mb-4 rounded-md" src="{{ asset('assets/images/yoga.avif') }}"
-                    alt="Card 3">
+                    <img class="w-full h-48 object-cover mb-4 rounded-md" src="{{ asset('assets/images/yoga.avif') }}"
+                        alt="Card 3">
                 </a>
                 <h2 class="text-3xl font-bold mb-4 text-primary1">YOGA</h2>
                 <p class="text-gray-600">Yoga untuk membuat tubuh menjadi rileks dan lega.</p>

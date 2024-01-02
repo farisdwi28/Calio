@@ -23,7 +23,7 @@
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-600">Nama:</label>
                         <input type="text" id="name" name="name" class="mt-1 p-2 border rounded-md w-full"
-                            placeholder="{{ auth()->user()->name }}" wire:model="name" disabled>
+                            placeholder="{{ auth()->user()->name }}" wire:model="name">
                 </div>
 
 
