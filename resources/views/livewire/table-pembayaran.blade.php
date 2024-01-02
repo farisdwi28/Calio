@@ -5,12 +5,10 @@
         </div>
     @endif
 
-    @if ($isModal)
-        @include('livewire.modalArtikel')
-    @endif
-
+    {{-- @if ($isModal)
+        @include('livewire.create')
+    @endif --}}
     <div class="overflow-x-auto shadow-md sm:rounded-lg p-4 sm:ml-64 pt-32">
-
         <div
             class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
             <label for="table-search" class="sr-only">Search</label>
@@ -26,37 +24,21 @@
                     class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Search for users">
             </div>
-            <button wire:click="create()" type="button"
-                class="group relative overflow-hidden bg-primary1 focus:ring-4 focus:ring-blue-300 inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center transition-all transform hover:scale-105">
-                Tambah Artikel
-                <svg class="z-40 ml-2 -mr-1 w-4 h-4 transition-all duration-300 transform group-hover:translate-x-1"
-                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-                <div
-                    class="absolute inset-0 h-[200%] w-[200%] rotate-45 translate-x-[-70%] transition-all group-hover:scale-100 bg-white/30 group-hover:translate-x-[50%] z-20 duration-1000">
-                </div>
-            </button>
         </div>
-
-
-
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        Foto
+                        Bukti Pembayaran
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Judul
+                        Nama Pemesan
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Deskripsi Singkat
+                        Daftar Pesanan
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Deskripsi
+                        Harga
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Action
@@ -64,29 +46,29 @@
                 </tr>
             </thead>
             <tbody>
-                @if (count($articles) > 0)
-                    @foreach ($articles as $artikel)
+                @if (count($pembayarans) > 0)
+                    @foreach ($pembayarans as $row)
                         <tr
                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                 <div>
-                                    <img src="{{ url('storage/' . $artikel->photo) }}" alt="Artikel Photo"
+                                    <img src="{{ url('storage/' . $row->photo) }}" alt="Artikel Photo"
                                         class="w-44 h-auto">
                                 </div>
                             </td>
                             <td class="px-6 py-4">
-                                {{ $artikel->title }}
+                                {{ $row->name }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $artikel->shortdescription }}
+                                {{ $row->pesanan }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $artikel->description }}
+                                {{ $row->harga }}
                             </td>
-                            <td class="flex flex-row gap-3 px-6 py-4">
-                                <button wire:click="edit({{ $artikel->id }})"
+                            <td class="flex items-center gap-3 px-6 py-4 text-gray-900">
+                                <button wire:click="edit({{ $row->id }})"
                                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
-                                <button wire:click="delete({{ $artikel->id }})"
+                                <button wire:click="delete({{ $row->id }})"
                                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
                             </td>
                         </tr>
@@ -98,6 +80,7 @@
                         </td>
                     </tr>
                 @endif
+
             </tbody>
         </table>
     </div>

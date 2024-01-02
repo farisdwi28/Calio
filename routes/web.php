@@ -7,6 +7,7 @@ use App\Livewire\Riwayatkelas;
 use App\Livewire\Article;
 use App\Livewire\ArtikelDetail;
 use App\Livewire\KelolaKelas;
+use App\Livewire\FormPembayaran;
 use Illuminate\Support\Facades\Route;
 
 Route::get('', function () {
@@ -44,6 +45,11 @@ Route::group(['middleware' => 'auth.custom'], function () {
         Route::get('/dashboardAdmin/kelolaMakanan', function () {
             return view('AdminCalio/kelolaMakanan');
         });
+
+        Route::get('/dashboardAdmin/kelolaPembayaran', function () {
+            return view('AdminCalio/kelolaPembayaran');
+        });
+
         Route::get('/dashboardAdmin/kelolaKelas', function () {
             return view('AdminCalio/kelolaKelas')->with('livewireComponent', app(KelolaKelas::class));
         });
@@ -56,6 +62,8 @@ Route::group(['middleware' => 'auth.custom'], function () {
     Route::get('/kelas', function () {
         return view('kelas/kelas');
     });
+
+    Route::get('/formpembayaran/{id}', [FormPembayaran::class, 'showDetail'])->name('Pembayaran.form');
 
     Route::get('/jadwal', function () {
         return view('kelas/jadwal')->with('livewireComponent', app(KelasJadwal::class));

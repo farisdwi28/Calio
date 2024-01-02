@@ -10,7 +10,6 @@ class makanan extends Model
     use HasFactory;
 
     protected $fillable = [
-        // Add 'id' to allow mass assignment
         'photo',
         'name',
         'description',
@@ -18,6 +17,5 @@ class makanan extends Model
         'stok',
         'status',
         'kategori',
-        // Add other attributes as needed
     ];
 }

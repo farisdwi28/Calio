@@ -101,7 +101,7 @@
                         <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                             <div>
                                 <img src="{{ url('storage/' . $makan->photo) }}" alt="Makanan Photo"
-                                    class="w-72 h-auto">
+                                    class="w-44 h-auto">
                             </div>
                         </td>
                         <td class="px-6 py-4">

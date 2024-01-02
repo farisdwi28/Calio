@@ -19,18 +19,5 @@ class Beranda extends Component
             'articles' => Artikel::orderBy('created_at', 'DESC')->get(),
         ]);
     }
-
-    public function ambil($id)
-    {
-        $artikel = Artikel::find($id);
-        if ($artikel) {
-            $this->id = $artikel->id;
-            $this->photo = $artikel->photo;
-            $this->title = $artikel->title;
-            $this->shortdescription = $artikel->shortdescription;
-            $this->description = $artikel->description;
-        }
-        redirect()->intended('/artikel');
-    }
 }
 

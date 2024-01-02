@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class pembayaran extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'pesanan',
+        'photo',
+        'harga',
+    ];
 }

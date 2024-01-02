@@ -138,8 +138,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('dashboardAdmin/kelolaArtikel') }}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" fill="#000000" version="1.1" id="XMLID_65_" xmlns="http://www.w3.org/2000/svg"
+                    <a href="{{ url('dashboardAdmin/kelolaArtikel') }}"
+                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" fill="#000000"
+                            version="1.1" id="XMLID_65_" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -171,7 +173,8 @@
                 <li>
                     <a href="{{ url('dashboardAdmin/kelolaMakanan') }}"
                         class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
-                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" fill="#000000" viewBox="0 -24.48 122.88 122.88" version="1.1" id="Layer_1"
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" fill="#000000"
+                            viewBox="0 -24.48 122.88 122.88" version="1.1" id="Layer_1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             style="enable-background:new 0 0 122.88 73.91" xml:space="preserve">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -191,6 +194,18 @@
                             </g>
                         </svg>
                         <span class="flex-1 ms-3 whitespace-nowrap font-semibold">Kelola Makanan </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('dashboardAdmin/kelolaPembayaran') }}"
+                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75-white" style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"
+                                fill="#000000"></path>
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap font-semibold">Kelola Pembayaran</span>
                     </a>
                 </li>
             </ul>

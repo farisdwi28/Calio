@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('pesanan');
-            $table->text('description');
+            $table->string('photo')->nullable();
             $table->string('harga');
             $table->timestamps();
         });

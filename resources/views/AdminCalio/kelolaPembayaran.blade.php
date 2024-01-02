@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kelola Artikel CALIO</title>
+    <title>Kelola Pembayaran CALIO</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
 <body>
     @livewire('sidebar-admin')
-    @livewire('article')
+    @livewire('table-pembayaran')
     @livewireScripts
 </body>
 </html>
