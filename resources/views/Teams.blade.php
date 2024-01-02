@@ -112,10 +112,10 @@
 
             <!-- Team Member 2 -->
             <div class="bg-white rounded-lg overflow-hidden shadow-md team-member">
-                <img src="member2.jpg" alt="Team Member 2" class="w-full h-48 object-cover object-center">
+                <img src="{{ asset('assets/images/Fadli_sementara.jpeg') }}" alt="Team Member 2" class="w-full h-48 object-cover object-center">
                 <div class="member-info">
                     <h2 class="member-name">Muhammad Fadli Raditya</h2>
-                    <p class="member-role">Telkom University || D3 Sistem Informasi || D3SI-46-04 || 6701223135</p>
+                    <p class="member-role">Telkom University || D3 Sistem Informasi || D3SI-46-04 || 6701220024</p>
                     <div class="social-icons">
                         <a href="https://github.com/johndoe" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -163,10 +163,10 @@
 
             <!-- Team Member 4 -->
             <div class="bg-white rounded-lg overflow-hidden shadow-md team-member">
-                <img src="member4.jpg" alt="Team Member 4" class="w-full h-48 object-cover object-center">
+                <img src="{{ asset('assets/images/elyasa.jpeg') }}" alt="Team Member 4" class="w-full h-48 object-cover object-center">
                 <div class="member-info">
                     <h2 class="member-name">Elyasa Reva</h2>
-                    <p class="member-role">Telkom University || D3 Sistem Informasi || D3SI-46-04 || 6701223135</p>
+                    <p class="member-role">Telkom University || D3 Sistem Informasi || D3SI-46-04 || 6701223051</p>
                     <div class="social-icons">
                         <a href="https://github.com/johndoe" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

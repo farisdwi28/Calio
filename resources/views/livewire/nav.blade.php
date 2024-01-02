@@ -66,7 +66,7 @@
                         </li>
                         <li>
                             <a href="{{ url('/teams') }}"
-                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary1 font-semibold md:hover:underline md:p-0 {{ request()->is('teams') ? 'bg-gray-100 bg-transparent text-primary1 font-semibold underline p-0' : '' }}">Teams</a>
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary1 font-semibold md:hover:underline md:p-0 {{ request()->is('teams') ? 'bg-gray-100 bg-transparent text-primary1 font-semibold underline p-0' : '' }}">Tim</a>
                         </li>
                     </ul>
                 </div>
