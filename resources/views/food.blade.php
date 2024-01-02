@@ -11,8 +11,8 @@
 </head>
 @livewire('nav')
 
-    @livewire('jajan')
-    
+@livewire('jajan')
+
 @livewire('footer')
 @livewireScripts
 </html>

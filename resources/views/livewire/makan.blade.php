@@ -65,57 +65,71 @@
                         Status
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Kategori
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Action
                     </th>
                 </tr>
             </thead>
             <tbody>
-                @if (count($makans) > 0)
-                    @foreach ($makans as $makan)
-                        <tr
-                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                <div>
-                                    <img src="{{ url('storage/' . $makan->photo) }}" alt="Makanan Photo"
-                                        class="w-72 h-auto">
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $makan->name }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $makan->description }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $makan->harga }}
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $makan->stok }}
-                            </td>
-                            <td class="px-6 py-4">
-                                @if ($makan->status == 'active')
-                                    <span class="inline-block w-4 h-4 rounded-full bg-green-500"></span>
-                                @else
-                                    <span class="inline-block w-4 h-4 rounded-full bg-red-500"></span>
-                                @endif
-                                {{ $makan->status }}
-                            </td>
-                            <td class="flex flex-row gap-3 px-6 py-4">
-                                <button wire:click="edit({{ $makan->id }})"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
-                                <button wire:click="delete({{ $makan->id }})"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
-                            </td>
-                        </tr>
-                    @endforeach
-                @else
-                    <tr>
-                        <td colspan="4" class="font-semibold py-3">
-                            Tidak ada data
+                @foreach ($makans as $makan)
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                            <div>
+                                <img src="{{ url('storage/' . $makan->photo) }}" alt="Makanan Photo"
+                                    class="w-72 h-auto">
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $makan->name }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $makan->description }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $makan->harga }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $makan->stok }}
+                        </td>
+                        <td class="px-6 py-4">
+                            @if ($makan->status == 'active')
+                                <span class="inline-block w-4 h-4 rounded-full bg-green-500"></span>
+                            @else
+                                <span class="inline-block w-4 h-4 rounded-full bg-red-500"></span>
+                            @endif
+                            {{ $makan->status }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $makan->kategori }}
+                        </td>
+                        <td class="flex flex-row gap-3 px-6 py-4">
+                            <button wire:click="edit({{ $makan->id }})"
+                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+                            <button wire:click="delete({{ $makan->id }})"
+                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                        </td>
+                    </tr>
+                                <!-- Food Section -->
+                    @if ($makan->kategori == 'makanan')
+                    <tr class="bg-green-200">
+                        <td colspan="7"> <!-- Adjust the colspan based on the number of columns -->
+                            Konten tambahan khusus untuk kategori makanan
                         </td>
                     </tr>
                 @endif
 
+                <!-- Drink Section -->
+                @if ($makan->kategori == 'minuman')
+                    <tr class="bg-blue-200">
+                        <td colspan="7"> <!-- Adjust the colspan based on the number of columns -->
+                            Konten tambahan khusus untuk kategori minuman
+                        </td>
+                    </tr>
+                @endif
+                @endforeach
             </tbody>
         </table>
     </div>

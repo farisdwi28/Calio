@@ -22,7 +22,7 @@ class KelasJadwal extends Component {
     }
     public function closeModal() {
         $this->isModal = true;
-        return redirect('/');
+        return redirect('/workout');
     }
 
     public function openModal() {

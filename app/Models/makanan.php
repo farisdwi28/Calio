@@ -17,6 +17,7 @@ class makanan extends Model
         'harga',
         'stok',
         'status',
+        'kategori',
         // Add other attributes as needed
     ];
 }

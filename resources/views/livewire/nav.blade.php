@@ -1,6 +1,6 @@
 <div>
     @if (auth()->check())
-        <nav id="scrollNav"
+        <nav
             class="bg-transparent fixed top-0 z-30 w-full backdrop-blur-3xl transition-transform duration-300 transform">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="{{ url('/') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                     <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 font-bold">
                         <li>
                             <a href="{{ url('') }}"
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary1 font-semibold md:hover:underline md:p-0 {{ request()->is('/') ? 'bg-gray-100 bg-transparent text-primary1 font-semibold underline p-0' : '' }}">Beranda</a>
@@ -64,12 +64,16 @@
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary1 font-semibold md:hover:underline md:p-0 {{ request()->is('food') ? 'bg-gray-100 bg-transparent text-primary1 font-semibold underline p-0' : '' }}">Rencana
                                 Makan</a>
                         </li>
+                        <li>
+                            <a href="{{ url('/teams') }}"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary1 font-semibold md:hover:underline md:p-0 {{ request()->is('teams') ? 'bg-gray-100 bg-transparent text-primary1 font-semibold underline p-0' : '' }}">Teams</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     @else
-        <nav id="scrollNav"
+        <nav
             class="bg-transparent fixed top-0 z-30 w-full backdrop-blur-3xl transition-transform duration-300 transform">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="{{ url('/') }}" class="flex items-center space-x-3 rtl:space-x-reverse ">
@@ -93,20 +97,4 @@
             </div>
         </nav>
     @endif
-    <script>
-        let prevScrollPos = window.pageYOffset;
-
-        window.onscroll = function() {
-            const currentScrollPos = window.pageYOffset;
-
-            if (prevScrollPos > currentScrollPos) {
-                document.getElementById("scrollNav").style.transform = "translateY(0)";
-            } else {
-                document.getElementById("scrollNav").style.transform = "translateY(-100%)";
-            }
-
-            prevScrollPos = currentScrollPos;
-        };
-    </script>
-
 </div>
