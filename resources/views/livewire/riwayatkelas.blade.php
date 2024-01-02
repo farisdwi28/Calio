@@ -1,7 +1,7 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="bg-white p-6 rounded-md shadow-md">
         <div class="flex justify-center mb-4">
-            <h1 class="text-2xl font-semibold text-gray-800">Riwayat Pengguna</h1>
+            <h1 class="text-2xl font-semibold text-gray-800">Pengguna</h1>
         </div>
         @if (session()->has('message'))
             <div class="bg-green-400 text-white rounded-md p-2 mb-4">
