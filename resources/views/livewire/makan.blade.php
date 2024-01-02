@@ -11,8 +11,7 @@
 
     <div class="overflow-x-auto shadow-md sm:rounded-lg p-4 sm:ml-64 pt-32">
 
-        <div
-            class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+        <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
             <label for="table-search" class="sr-only">Search</label>
             <div class="relative">
                 <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -24,7 +23,7 @@
                 </div>
                 <input type="text" id="table-search-users"
                     class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search for users">
+                    placeholder="Search for foods" oninput="searchFoods()">
             </div>
             <button wire:click="create()" type="button"
                 class="group relative overflow-hidden bg-primary1 focus:ring-4 focus:ring-blue-300 inline-flex items-center px-7 py-2.5 rounded-lg text-white justify-center transition-all transform hover:scale-105">
@@ -40,6 +39,29 @@
                 </div>
             </button>
         </div>
+
+        <!-- Replace "food-item" with the actual class of food items you want to filter -->
+
+
+        <script>
+            function searchFoods() {
+                var input, filter, foodItems, i, txtValue;
+                input = document.getElementById("table-search-users");
+                filter = input.value.toUpperCase();
+                foodItems = document.getElementsByClassName("food-item");
+
+                for (i = 0; i < foodItems.length; i++) {
+                    txtValue = foodItems[i].textContent || foodItems[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        foodItems[i].style.display = "";
+                    } else {
+                        foodItems[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+
 
 
 
