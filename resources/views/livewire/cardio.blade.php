@@ -5,7 +5,7 @@
                 <div class="bg-white max-w-md p-8 rounded-lg shadow-md mb-4 hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
                     <a href="{{ url('/jadwal') }}">
                         <img src="{{ url('storage/' . $kelas->photo) }}" alt="Sports"
-                            class="w-full h-48 object-cover rounded-md mb-4">
+                        class="w-full max-w-2xl h-auto object-cover rounded shadow-lg transition-transform transform hover:scale-105 blur-sm hover:blur-none">
                     </a>
                     <h2 class="text-2xl font-bold text-primary1 mb-2">{{ $kelas->title }}</h2>
                     <p class="text-gray-600 mb-4">{{ $kelas->description }}</p>
