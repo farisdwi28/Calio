@@ -8,6 +8,7 @@ use App\Livewire\Article;
 use App\Livewire\ArtikelDetail;
 use App\Livewire\KelolaKelas;
 use App\Livewire\FormPembayaran;
+use App\Livewire\DetailMenu;
 use Illuminate\Support\Facades\Route;
 
 Route::get('', function () {
@@ -77,14 +78,6 @@ Route::group(['middleware' => 'auth.custom'], function () {
         return view('kelas/workout');
     });
 
-    Route::get('/payment', function () {
-        return view('Payment');
-    });
-
-    Route::get('/tablePayment', function () {
-        return view('detailPayment');
-    });
-
     Route::get('/makanan', function () {
         return view('makanan');
     });
@@ -101,12 +94,6 @@ Route::group(['middleware' => 'auth.custom'], function () {
         return view('food');
     });
 
-    Route::get('/food2', function () {
-        return view('food2');
-    });
-
-    Route::get('/detail', function () {
-        return view('detail');
-    });
+    Route::get('/detail/{id}', [DetailMenu::class, 'showDetail'])->name('detail');
 });
 

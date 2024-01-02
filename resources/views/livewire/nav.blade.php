@@ -27,14 +27,19 @@
                         </div>
                         <ul class="py-2" aria-labelledby="user-menu-button">
                             <li>
-                                <a href="/Profile">
-                                    <button
-                                        class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</button></a>
-                            </li>
-                            <li>
                                 <a href="/historikelas">
                                     <button
                                         class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Riwayat Kelas</button></a>
+                            </li>
+                            <li>
+                                <a href="/historipembayaran">
+                                    <button
+                                        class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Riwayat Pembayaran</button></a>
+                            </li>
+                            <li>
+                                <a href="/Profile">
+                                    <button
+                                        class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</button></a>
                             </li>
                             <li>
                                 <button wire:click="logout"
