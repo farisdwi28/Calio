@@ -10,7 +10,7 @@ class AuthenticateCustom
     public function handle($request, Closure $next)
     {
         if (!Auth::check()) {
-            return redirect('/login'); // Redirect to the login page if not authenticated
+            return redirect('/login');
         }
 
         return $next($request);

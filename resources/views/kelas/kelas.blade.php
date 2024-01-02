@@ -23,8 +23,6 @@
         </div>
     </div>
 
-
-
     <div class="mx-auto mt-16 mb-20 px-4 sm:px-6 md:px-8 text-center">
         <h5 class="text-2xl md:text-3xl lg:text-4xl font-bold text-primary1 mb-3" data-aos="fade-up">Mulai Tujuanmu</h5>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="flip-down">

@@ -1,11 +1,11 @@
 <div>
-    <div class="relative h-screen overflow-hidden">
+    <div class="relative h-screen overflow-hidden" >
         <div class="fixed z-10 inset-0 overflow-y-auto">
             <<div class="absolute inset-0">
                 <img src="{{ asset('assets/images/bgprof.avif') }}" class="fixed w-screen h-screen object-cover">
         </div>
     </div>
-    <div class="relative z-10 max-w-md mx-auto bg-white  p-6 rounded-md shadow-md my-36">
+    <div class="relative z-10 max-w-md mx-auto bg-white  p-6 rounded-md shadow-md my-36" data-aos="zoom-out-up">
         <h1 class="text-2xl font-bold mb-4 text-primary1">Profile</h1>
         <label for="id"
             class="hidden block text-sm font-medium text-gray-600">{{ optional(Auth::user())->id }}</label>
