@@ -37,18 +37,6 @@ class KelasJadwal extends Component {
         $this->id = '';
     }
 
-    public function mount()
-    {
-        $jadwal = Auth::user();
-
-        if ($jadwal) {
-            $this->id = $jadwal->id;
-            $this->name = $jadwal->name;
-            $this->tanggal = $jadwal->tanggal;
-            $this->kelas = $jadwal->username;
-        }
-    }
-
     public function add()
     {
         $this->validate([
