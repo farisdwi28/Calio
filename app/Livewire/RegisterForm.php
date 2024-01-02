@@ -10,6 +10,7 @@ class RegisterForm extends Component
     use WithFileUploads;
 
     public $users, $name, $phone_number, $username, $password, $id, $role, $photo;
+    public $showPassword = false;
 
     public function render()
     {
@@ -20,6 +21,11 @@ class RegisterForm extends Component
     public function create()
     {
         $this->resetFields();
+    }
+
+    public function togglePasswordVisibility()
+    {
+        $this->showPassword = !$this->showPassword;
     }
 
     public function resetFields()

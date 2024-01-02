@@ -13,6 +13,7 @@
 
 <body>
     @livewire('nav')
+    @livewire('breadcrumb', ['homeUrl' => url('/'), 'projectsUrl' => url("yoga"), 'projectsText' => 'Yoga'])
     @livewire('Yoga')
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

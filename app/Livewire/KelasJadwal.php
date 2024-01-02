@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Jadwal;
+use Illuminate\Support\Facades\Auth;
 
 class KelasJadwal extends Component {
     public $jadwals, $name, $tanggal, $kelas, $id;
@@ -21,7 +22,7 @@ class KelasJadwal extends Component {
     }
     public function closeModal() {
         $this->isModal = true;
-        return redirect('/workout');
+        return redirect('/kelas');
     }
 
     public function openModal() {
@@ -34,6 +35,18 @@ class KelasJadwal extends Component {
         $this->tanggal = '';
         $this->kelas = '';
         $this->id = '';
+    }
+
+    public function mount()
+    {
+        $jadwal = Auth::user();
+
+        if ($jadwal) {
+            $this->id = $jadwal->id;
+            $this->name = $jadwal->name;
+            $this->tanggal = $jadwal->tanggal;
+            $this->kelas = $jadwal->username;
+        }
     }
 
     public function add()
@@ -55,22 +68,5 @@ class KelasJadwal extends Component {
 
         $this->resetFields();
         return redirect('/riwayatkelas');
-    }
-    public function edit($id) {
-        $jadwals = Jadwal::find($id);
-
-        if($jadwals) {
-            $this->id = $jadwals->id;
-            $this->name = $jadwals->name;
-            $this->tanggal = $jadwals->tanggal;
-            $this->kelas = $jadwals->kelas;
-        }
-
-        $this->openModal();
-    }
-    public function delete($id) {
-        $jadwals = Jadwal::find($id);
-        $jadwals->delete();
-        session()->flash('message', $jadwals->name.' Dihapus');
     }
 }

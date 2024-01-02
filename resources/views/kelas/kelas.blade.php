@@ -7,25 +7,25 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Calio</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     @livewireStyles
 </head>
 
-<body class="font-sans bg-gray-100">
-    @livewire('nav')
-
+@livewire('nav')
+<body class="font-sans bg-gray-100 scroll-smooth" data-aos="zoom-in">
     <div class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
             <img src="{{ asset('assets/images/kelasbg.jpeg') }}" class="w-full h-full object-cover" alt="Banner">
         </div>
-        <div class="relative z-10 text-center text-white mt-20">
+        <div class="relative z-10 text-center text-white mt-20" data-aos="fade-up">
             <img src="{{ asset('assets/images/logotulisan.png') }}" class="h-14 mx-auto my-3" alt="Calio Logo">
         </div>
     </div>
 
     <div class="mx-auto mt-16 mb-20 px-4 sm:px-6 md:px-8 text-center">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary1 mb-8">MULAI TUJUANMU</h1>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary1 mb-8" data-aos="fade-up">MULAI TUJUANMU</h1>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"  data-aos="flip-down">
             <div
                 class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out max-w-screen-lg">
                 <a href="{{ url('/workout') }}">
@@ -66,7 +66,10 @@
             </div>
         </div>
     </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     @livewire('footer')
     @livewireScripts
 </body>

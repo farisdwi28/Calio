@@ -23,6 +23,10 @@ Route::get('/register', function () {
     return view('Register/register')->with('livewireComponent', app(RegisterForm::class));
 });
 
+Route::get('/teams', function () {
+    return view('Teams');
+});
+
 Route::group(['middleware' => 'auth.custom'], function () {
     Route::group(['middleware' => 'admin'], function () {
         Route::get('/dashboardAdmin/userManage', function () {

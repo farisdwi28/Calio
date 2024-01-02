@@ -22,14 +22,10 @@
 
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-600">Nama:</label>
-                    @if (auth()->check())
                         <input type="text" id="name" name="name" class="mt-1 p-2 border rounded-md w-full"
-                            placeholder="{{ optional(Auth::user())->name }}" wire:model="name">
-                    @else
-                        <input type="text" id="name" name="name" class="mt-1 p-2 border rounded-md w-full"
-                            disabled placeholder="Tidak ada user login" wire:model="name">
-                    @endif
+                            placeholder="{{ auth()->user()->name }}" wire:model="name" disabled>
                 </div>
+
 
                 <div class="mb-6">
                     <label for="formTanggal" class="block text-gray-800 text-sm font-bold mb-2">Tanggal:</label>

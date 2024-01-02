@@ -11,7 +11,8 @@
 
     <div class="overflow-x-auto shadow-md sm:rounded-lg p-4 sm:ml-64 pt-32">
 
-        <div class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
+        <div
+            class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
             <label for="table-search" class="sr-only">Cari</label>
             <div class="relative">
                 <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -51,25 +52,34 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($class as $wadew)
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                            <div>
-                                <img src="{{ url('storage/' . $wadew->photo) }}" alt="Kelas Photo"
-                                    class="w-72 h-auto">
-                            </div>
-                        </td>
-                        <td class="px-6 py-4">{{ $wadew->kategori }}</td>
-                        <td class="px-6 py-4">{{ $wadew->title }}</td>
-                        <td class="px-6 py-4">{{ $wadew->description }}</td>
-                        <td class="flex flex-row gap-3 px-6 py-4">
-                            <button wire:click="edit({{ $wadew->id }})"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
-                            <button wire:click="delete({{ $wadew->id }})"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                @if (count($class) > 0)
+                    @foreach ($class as $wadew)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                <div>
+                                    <img src="{{ url('storage/' . $wadew->photo) }}" alt="Kelas Photo"
+                                        class="w-72 h-auto">
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">{{ $wadew->kategori }}</td>
+                            <td class="px-6 py-4">{{ $wadew->title }}</td>
+                            <td class="px-6 py-4">{{ $wadew->description }}</td>
+                            <td class="flex flex-row gap-3 px-6 py-4">
+                                <button wire:click="edit({{ $wadew->id }})"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+                                <button wire:click="delete({{ $wadew->id }})"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="4" class="font-semibold py-3">
+                            Tidak ada data
                         </td>
                     </tr>
-                @endforeach
+                @endif
             </tbody>
         </table>
     </div>

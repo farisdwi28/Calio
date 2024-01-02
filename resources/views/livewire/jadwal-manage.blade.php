@@ -43,29 +43,38 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($jadwals as $row)
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                            <div>
-                                <div class="text-base font-semibold">{{ $row->name }}</div>
-                                <div class="font-normal text-gray-500">{{ $row->username }}</div>
-                            </div>
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $row->tanggal }}
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $row->kelas }}
-                        </td>
-                        <td class="flex flex-row gap-3 px-6 py-4">
-                            <button wire:click="edit({{ $row->id }})"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
-                            <button wire:click="delete({{ $row->id }})"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                @if (count($jadwals) > 0)
+                    @foreach ($jadwals as $row)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                <div>
+                                    <div class="text-base font-semibold">{{ $row->name }}</div>
+                                    <div class="font-normal text-gray-500">{{ $row->username }}</div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $row->tanggal }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $row->kelas }}
+                            </td>
+                            <td class="flex flex-row gap-3 px-6 py-4">
+                                <button wire:click="edit({{ $row->id }})"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+                                <button wire:click="delete({{ $row->id }})"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</button>
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="4" class="font-semibold py-3">
+                            Tidak ada data
                         </td>
                     </tr>
-                @endforeach
+                @endif
+
             </tbody>
         </table>
     </div>
