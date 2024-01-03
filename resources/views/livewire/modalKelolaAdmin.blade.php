@@ -6,7 +6,7 @@
         <div
             class="inline-block align-bottom bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-md sm:w-full">
             <div class="p-6 rounded-t-lg">
-                <h1 class="text-3xl text-gray-800 font-bold">User Manage</h1>
+                <h1 class="text-3xl text-gray-800 font-bold">Kelola Admin</h1>
             </div>
             <form class="bg-gray-100 px-8 pt-6 pb-8 sm:p-6 sm:pb-4">
 
@@ -18,9 +18,16 @@
                     @enderror
                 </div>
                 <div class="mb-4">
-                    <label for="username" class="block text-sm font-medium text-gray-600">Username:</label>
+                    <label for="username" class="block text-sm font-medium text-gray-600">Nama Pengguna:</label>
                         <input type="text" id="username" name="username" class="mt-1 p-2 border rounded-md w-full" wire:model="username">
                     @error('username')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-600">Kata Sandi:</label>
+                        <input type="password" id="password" name="password" class="mt-1 p-2 border rounded-md w-full" wire:model="password">
+                    @error('password')
                         <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>
@@ -28,6 +35,13 @@
                     <label for="phone_number" class="block text-sm font-medium text-gray-600">No Telp:</label>
                         <input type="text" id="phone_number" name="phone_number" class="mt-1 p-2 border rounded-md w-full" wire:model="phone_number">
                     @error('phone_number')
+                        <span class="text-red-500">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="mb-4">
+                    <label for="role" class="block text-sm font-medium text-gray-600">Role:</label>
+                        <input type="text" id="role" name="role" class="mt-1 p-2 border rounded-md w-full" wire:model="role" disabled>
+                    @error('role')
                         <span class="text-red-500">{{ $message }}</span>
                     @enderror
                 </div>

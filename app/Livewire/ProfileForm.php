@@ -30,7 +30,7 @@ class ProfileForm extends Component
         }
     }
 
-    public function togglePasswordVisibility()
+    public function lihatpassword()
     {
         $this->showPassword = !$this->showPassword;
     }
@@ -73,7 +73,7 @@ class ProfileForm extends Component
         if ($user) {
             $user->delete();
             session()->flash('message', $user->name . ' Dihapus');
-            return redirect('/home'); // Redirect to a suitable page after deletion
+            return redirect('/home'); 
         }
     }
 }

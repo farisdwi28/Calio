@@ -35,6 +35,10 @@ Route::group(['middleware' => 'auth.custom'], function () {
             return view('AdminCalio/userManage');
         });
 
+        Route::get('/dashboardAdmin/kelolaAdmin', function () {
+            return view('AdminCalio/kelolaAdmin');
+        });
+
         Route::get('/dashboardAdmin/kelolaJadwal', function () {
             return view('AdminCalio/kelolaJadwal');
         });

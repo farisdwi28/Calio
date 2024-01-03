@@ -23,7 +23,7 @@ class RegisterForm extends Component
         $this->resetFields();
     }
 
-    public function togglePasswordVisibility()
+    public function lihatpassword()
     {
         $this->showPassword = !$this->showPassword;
     }
